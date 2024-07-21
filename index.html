@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Daily Planner</h1>
+    </header>
+    <main>
+        <section id="todo">
+            <h2>To-Do List</h2>
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="taskList"></ul>
+        </section>
+        
+        <section id="journal">
+            <h2>Journal</h2>
+            <input type="date" id="journalDateInput" onchange="loadJournalForDate()">
+            <textarea id="journalEntry" placeholder="Write your journal entry here..."></textarea>
+            <button onclick="saveJournal()">Save Entry</button>
+            <div id="journalEntries"></div>
+        </section>
+        
+        <section id="calendar">
+            <h2>Calendar</h2>
+            <div id="calendarView"></div>
+        </section>
+
+        <section id="timetable">
+            <h2>Timetable</h2>
+            <input type="file" id="fileInput" accept="image/*">
+            <button onclick="uploadTimetable()">Upload Timetable</button>
+            <div id="timetableView"></div>
+        </section>
+
+        <section id="monthly-goals">
+            <h2>Monthly Goals</h2>
+            <input type="text" id="goalInput" placeholder="Enter a goal">
+            <button onclick="addGoal()">Add Goal</button>
+            <ul id="goalList"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
